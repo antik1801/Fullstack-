@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { useDispatch, useSelector } from 'react-redux'
-import './App.css'
+import { useDispatch, useSelector } from 'react-redux';
+import './App.css';
 import { decrement, increment, incrementByValues } from './redux/features/counterSlice';
 
 function App() {
@@ -21,4 +21,5 @@ function App() {
   )
 }
 
-export default App
+export default App;
+

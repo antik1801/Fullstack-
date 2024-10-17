@@ -52,8 +52,11 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
-  		}
+  			},
+  		},
+		backgroundImage:{
+			'primary-gradient': 'linear-gradient(30deg, #DC02C2, #5C53FE)'
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

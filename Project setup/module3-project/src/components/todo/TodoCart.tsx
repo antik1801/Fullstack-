@@ -1,19 +1,25 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { removeTodo, TTodo } from "@/redux/features/todoSlice";
+import { removeTodo, toggleCompleted, TTodo } from "@/redux/features/todoSlice";
 import { useDispatch } from "react-redux";
 
-const TodoCart = ({title, description, id} : Partial<TTodo>) => {
+const TodoCart = ({title, description, id, isCompleted} : Partial<TTodo>) => {
 
   const dispatch = useDispatch();
 
+  const toggleChange = () =>{
+    dispatch(toggleCompleted(id!));
+  }
+
   return (
     <div className="card bg-white p-3 rounded-lg flex justify-between items-center border">
-      <input type="checkbox" name="checkTodo" id="checkTodo" />
-      <p className="font-bold">{title}</p>
-      <p>Time:</p>
-      <p>{description}</p>
-      <div className="space-x-1">
+      <input className="mr-4" type="checkbox" onChange={toggleChange} name="checkTodo" id="checkTodo" />
+      <div className="flex-1 min-w-0"> <p className="font-bold break-words">{title}</p> </div>
+      <div className="flex-1 text-center">{isCompleted? <p className="font-semibold text-green-500">Done</p> : <p className="font-semibold text-red-500">Pending</p> }</div>
+      <div className={`flex-1 min-w-0 mr-4 ${description && description.length <= 20 ? 'text-center' : 'text-left'}`}>
+      <p className="break-words">{description}</p>
+      </div>
+      <div className="space-x-1 flex flex-none items-center">
         <Button onClick={()=> dispatch(removeTodo(id!))} className="bg-red-500">
           <svg
             className="size-5"

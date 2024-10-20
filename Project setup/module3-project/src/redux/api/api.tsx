@@ -7,10 +7,11 @@ export const baseApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: 'https://jsonplaceholder.typicode.com'}),
     endpoints: (builder)=>({
         getTodo: builder.query({
-            query: ()=>({
+            query: ()=> {
+                 return {
                     url: '/todos',
                     method: 'GET',
-            })
+            }}
         })
     })
 })

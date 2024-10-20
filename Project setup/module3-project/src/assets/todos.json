@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "title": "Finish TypeScript project",
+      "description": "Complete the TypeScript and Mongoose project by the end of the week.",
+      "isCompleted": false,
+      "priority": "high"
+    },
+    {
+      "id": "2",
+      "title": "Study for exam",
+      "description": "Prepare for the upcoming AIUB exams.",
+      "isCompleted": false,
+      "priority": "mid"
+    },
+    {
+      "id": "3",
+      "title": "Grocery shopping",
+      "description": "Buy groceries for the week including fruits and vegetables.",
+      "isCompleted": true,
+      "priority": "low"
+    },
+    {
+      "id": "4",
+      "title": "Call the mentor",
+      "description": "Discuss career progress and future goals with the mentor.",
+      "isCompleted": false,
+      "priority": "mid"
+    },
+    {
+      "id": "5",
+      "title": "Plan vacation",
+      "description": "Plan the details for the vacation trip next month.",
+      "isCompleted": true,
+      "priority": "low"
+    }
+  ]
+  

@@ -29,8 +29,13 @@ export const todoSlice = createSlice({
         },
         toggleCompleted: (state, action: PayloadAction<string>) =>{
             const task = state.todos.find(item => item.id === action.payload);
-            task!.isCompleted = !task?.isCompleted;
-        }
+            if(task)
+            {
+                task!.isCompleted = !task?.isCompleted;
+                state.todos = state.todos.sort((a,b) => Number(a.isCompleted) - Number(b.isCompleted));
+            }
+        },
+       
     }
 })
 

@@ -4,13 +4,21 @@ import TodoCart from './TodoCart'
 import AddTodoModel from './AddTodoModel'
 import TodoFilter from './TodoFilter'
 import { useAppSelector } from '@/redux/hooks/hooks'
+import { useGetTodoQuery } from '@/redux/api/api'
 
 
 
 
 const TodoContainer = () => {
 
-  const {todos} = useAppSelector((state) => state.todos)
+  // const {todos} = useAppSelector((state) => state.todos)
+  // const sortedTodos = [...todos].sort((a, b) => Number(a.isCompleted) - Number(b.isCompleted))
+  const { data: todos, isError, isLoading } = useGetTodoQuery(undefined);
+  if(isLoading)
+  {
+    return <h1>Loading...</h1>
+  }
+  console.log(todos);
   return (
     <div>
       <div className='flex justify-between mb-5'>

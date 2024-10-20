@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent } from "react";
 import {
   Dialog,
   DialogClose,
@@ -12,7 +12,7 @@ import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 // import { useAppDispatch } from "@/redux/hooks/hooks";
-import { addTodo, TTodo } from "@/redux/features/todoSlice";
+// import { addTodo, TTodo } from "@/redux/features/todoSlice";
 
 const EditTodoModel = () => {
 //   const [task, setTask] = useState("");
@@ -67,7 +67,7 @@ const EditTodoModel = () => {
                 Task
               </Label>
               <Input
-                onBlur={(e) => setTask(e.target.value)}
+                // onBlur={(e) => setTask(e.target.value)}
                 id="name"
                 className="col-span-3"
         
@@ -78,7 +78,7 @@ const EditTodoModel = () => {
                 Description
               </Label>
               <Input
-                onBlur={(e) => setDescriptions(e.target.value)}
+                // onBlur={(e) => setDescriptions(e.target.value)}
                 id="username"
                 className="col-span-3"
              
